@@ -100,5 +100,36 @@ state={
 			        />
 			      </form>
 			    </nav>
+<div class="firstResult">
+{this.state.results?<span className="results">{this.state.results.length} Results</span>:<span className="results">No Results for these terms.</span>}
+{this.state.results.map((result,idx)=>{
+		return (<>
+			<small>{result.url}</small>
+
+			<h2>
+				<a href={result.url}>{result.title}</a>
+			</h2>
+			<p>
+				{result.description}
+			</p>
+			<ul>
+			    {result.links.map((link,idx)=>{
+					return (
+							<>
+								<li>
+									<a href={link.url}>{link.title}
+									</a>
+								</li>
+							</>
+					)
+
+					})}
+			</ul>
+			</>)
+})}
+</div>
+</div>
+			</>)
+  }
 }
 export default App
