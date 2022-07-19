@@ -86,5 +86,19 @@ state={
 }
 
   render() {
+    return (
+			<>
+			<div className="results_page">
+			<nav className="navbar">
+			      <img className="logo2" src="/google.png" alt="" />
+			      <form className="form2">
+			        <input className="search2" type="text" />
+			        <input
+			          className="but2"
+			          type="button"
+			          value="Search"
+			        />
+			      </form>
+			    </nav>
 }
 export default App
