@@ -14,8 +14,10 @@ class App extends React.Component {
 search=(e)=>{
 	//console.log(e.target.value)
 	this.setState({
-		searchTerms:e.target.value
+		val:e.target.value
+
 	})
+	console.log(e.target.value);
 }
 searchButton=()=>{
 	let data=this.state.results
