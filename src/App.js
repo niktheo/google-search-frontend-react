@@ -85,6 +85,12 @@ class App extends React.Component {
 	]
 	}
 
+search=(e)=>{
+	//console.log(e.target.value)
+	this.setState({
+		searchTerms:e.target.value
+	})
+}
 
 }
 
