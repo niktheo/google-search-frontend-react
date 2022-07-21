@@ -32,6 +32,12 @@ search=(e)=>{
 //
 // }
 
+searchButton= async()=>{
+	let response= await axios.get(`http://localhost:3000/results?searchTerms=${this.state.val}`)
+	console.log(response)
+	this.setState({
+		results:response.data
+})
 }
 
   render() {
@@ -47,12 +53,12 @@ search=(e)=>{
 			          className="but2"
 			          type="button"
 			          value="Search"
-								onClick={this.searchButton}
+								onClick={()=>this.searchButton()}
 			        />
 			      </form>
 			    </nav>
 
-<div>{this.state.searchTerms}</div>
+
 <div className="firstResult">
 {this.state.results?<p className="results">{this.state.results.length} Results {this.state.results.map((result,idx)=>{
 		return (<>
@@ -68,7 +74,7 @@ search=(e)=>{
 			    {result.links.map((link,idx)=>{
 					return (
 							<>
-								<li>
+								<li key={idx}>
 									<a href={link.url}>{link.title}
 									</a>
 								</li>
