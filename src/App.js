@@ -121,9 +121,10 @@ searchButton=()=>{
 			        />
 			      </form>
 			    </nav>
-<div class="firstResult">
-{this.state.results?<span className="results">{this.state.results.length} Results</span>:<span className="results">No Results for these terms.</span>}
-{this.state.results.map((result,idx)=>{
+
+<div>{this.state.searchTerms}</div>
+<div className="firstResult">
+{this.state.results?<p className="results">{this.state.results.length} Results {this.state.results.map((result,idx)=>{
 		return (<>
 			<small>{result.url}</small>
 
@@ -147,7 +148,9 @@ searchButton=()=>{
 					})}
 			</ul>
 			</>)
-})}
+})}</p>:<span className="results">No Results for these terms.</span>}
+
+
 </div>
 </div>
 			</>)
