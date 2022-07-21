@@ -91,6 +91,16 @@ search=(e)=>{
 		searchTerms:e.target.value
 	})
 }
+searchButton=()=>{
+	let data=this.state.results
+	let finded= data.filter((e)=>{
+	 		return (e.title==this.state.searchTerms ) 
+	 })
+	 this.setState({
+		 results:finded
+	 })
+	console.log(data.results)
+	//console.log(this.state.searchTerms);
 
 }
 
