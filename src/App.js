@@ -5,6 +5,9 @@ const axios = require('axios').default;
 class App extends React.Component {
 
 	state={
+		results:[],
+		originalResults:[],
+		val:''
 
 	}
 
