@@ -52,13 +52,13 @@ this.searchButton()
 			<div className="results_page">
 			<nav className="navbar">
 			      <img className="logo2" src="/google.png" alt="" />
-			      <form className="form2">
+			      <form className="form2" onSubmit={e=>this.searchButton(e)}>
 			        <input className="search2" type="text" onChange={e=>this.search(e)}/>
 			        <input
 			          className="but2"
 			          type="button"
 			          value="Search"
-								onClick={()=>this.searchButton()}
+								onClick={e=>this.searchButton(e)}
 			        />
 			      </form>
 			    </nav>
