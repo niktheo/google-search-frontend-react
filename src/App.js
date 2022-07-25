@@ -32,7 +32,10 @@ search=(e)=>{
 //
 // }
 
-searchButton= async()=>{
+searchButton= async(e)=>{
+	if(e){
+		e.preventDefault()
+	}
 	let response= await axios.get(`http://localhost:3000/results?searchTerms=${this.state.val}`)
 	console.log(response)
 	this.setState({
