@@ -42,7 +42,9 @@ searchButton= async(e)=>{
 		results:response.data
 })
 }
-
+componentWillMount(){
+this.searchButton()
+}
   render() {
     return (
 			<>
